@@ -1,0 +1,102 @@
+@theme "/dev/null"
+
+* {
+  bg: #1e1e2e;
+  bg-alt: #8aadf4;
+  bg-selected: #313244;
+
+  fg: #cdd6f4;
+  fg-alt: #7f849c;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+configuration {
+  show-icons: true;
+  icon-theme: "Papirus";
+  display-drun: "󰘔 ";
+  display-window: " ";
+  display-run: " ";
+  display-filebrowser: " ";
+  font: "FiraCode Nerd Font Medium 10";
+  modi: "drun,window,run,filebrowser";
+}
+
+window {
+  width: 30%;
+  background-color: @bg;
+}
+
+mainbox {
+  children: [inputbar, listview, mode-switcher];
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+  border: 1px;
+  border-color: @fg;
+}
+
+prompt {
+  background-color: @bg-alt;
+  text-color: @bg;
+  padding: 12;
+}
+
+entry {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 12;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+  scrollbar: false;
+}
+
+element {
+  children : [element-icon, element-text];
+  background-color: @bg;
+}
+
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: @fg;
+  padding: 10;
+}
+
+element-icon {
+  size: 20;
+  padding: 10;
+  background-color: inherit;
+}
+
+mode-switcher {
+  background: @bg;
+  background-color: @bg;
+  padding: 10;
+  children: [button];
+}
+
+button {
+  text-color: @fg;
+  background-color: @bg;
+}
+
+button selected {
+  padding: 10;
+  size: 10;
+  text-color: @fg;
+  background-color: @bg-selected;
+}
