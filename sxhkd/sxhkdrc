@@ -20,11 +20,22 @@ alt + Tab
   rofi -show window
 
 super + v
-  copyq toggle
+  copyq show
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+#volume control
+XF86Audio{Raise,Lower}Volume
+  amixer set Master 1%{+,-} unmute
+
+XF86AudioMute
+  amixer set Master toggle
+
+#Brightness control
+XF86MonBrightness{Up,Down}
+  brightnessctl set 10{+,-} --device="amdgpu_bl0"
 
 #
 # bspwm hotkeys

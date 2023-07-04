@@ -36,5 +36,8 @@ dunst &
 ../polybar/launch.sh
 #picom
 picom &
+#network-manager applet
+nm-applet &
+#audio applet
 
 #---------- MISC ----------#
