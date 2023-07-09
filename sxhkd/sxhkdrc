@@ -22,6 +22,11 @@ alt + Tab
 super + v
   copyq show
 
+Print
+  flameshot gui
+super + Print
+  flameshot screen
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -106,6 +111,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# send node to minimized desktop 11
+super + d
+  bspc {node -d} '^{11}'
 
 #
 # preselect

@@ -6,9 +6,9 @@ starship init fish | source
 
 # Aliases
 alias hdd="cd /run/media/sourav/HDD"
-alias ls="exa --icons -l"
-alias la="exa --icons -la"
-alias tree="exa -T --level=3"
+alias ls="exa --icons -l --git"
+alias la="exa --icons -la --git"
+alias tree="exa -T --level=3 --git"
 alias cat="bat"
 alias clock="tty-clock -sct"
 
