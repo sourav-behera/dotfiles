@@ -6,7 +6,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.config/polybar/launch.sh
 flameshot &
 copyq &
-cbatticon &
+on &
 nitrogen --restore
 picom &
 #repeat rate

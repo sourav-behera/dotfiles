@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    #figlet "Hello There!"
     pfetch
 end
 set fish_greeting ""
@@ -15,3 +16,9 @@ alias clock="tty-clock -sct"
 
 # Created by `pipx` on 2023-06-29 00:27:02
 set PATH $PATH /home/sourav/.local/bin
+
+# Go
+set GOPATH /home/sourav/go/
+
+# Default Editor
+#set -Ux EDITOR nvim

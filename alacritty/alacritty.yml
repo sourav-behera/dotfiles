@@ -17,8 +17,8 @@ font:
 
 window:
   padding:
-    x: 6
-    y: 3
+    x: 4
+    y: 0
 
 colors:
     # Default colors

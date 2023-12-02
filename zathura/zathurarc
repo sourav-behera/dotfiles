@@ -36,9 +36,5 @@ set highlight-color		        "#575268"
 set highlight-fg              "#F5BDE6"
 set highlight-active-color	  "#F5BDE6"
 
-set recolor true
-set page-padding 5
-
-set font "FiraCode Nerd Font 12"
-
-map i set "recolor"
+set selection-clipboard 0
+map i recolor
