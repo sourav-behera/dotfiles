@@ -1,102 +1,136 @@
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e;
-  bg-alt: #8aadf4;
-  bg-selected: #313244;
+  bg: #1a1b26;
+  fg: #c0caf5;
+  bg-selected: #15161e;
+  black:   #414868;
+  red:     #f7768e;
+  green:   #9ece6a;
+  yellow:  #e0af68;
+  blue:    #7aa2f7;
+  magenta: #bb9af7;
+  cyan:    #7dcfff;
+  white:   #c0caf5;
 
-  fg: #cdd6f4;
-  fg-alt: #7f849c;
-
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
 }
 
 configuration {
   show-icons: true;
-  icon-theme: "Papirus";
+  icon-theme: "Tela circle blue";
   display-drun: "󰘔 ";
   display-window: " ";
   display-run: " ";
   display-filebrowser: " ";
-  font: "FiraCode Nerd Font Medium 10";
+  font: "FiraCode Nerd Font Medium 12";
   modi: "drun,window,run,filebrowser";
 }
 
-window {
-  width: 30%;
+window{
+  location: center;
+  anchor: center;
+  width: 25%;
+  x-offset: 0;
+  y-offset: 0;
+  border: 2px;
+  border-color: #7aa2f799;
+  border-radius: 10px;
+  transparency: "real";
+}
+
+mainbox{
   background-color: @bg;
+  padding: 10px;
+  spacing: 10px;
+  children: [inputbar, message, listview, mode-switcher];
+  border-radius: 10px;
 }
 
-mainbox {
-  children: [inputbar, listview, mode-switcher];
-}
-
-inputbar {
+inputbar{
+  background-color: @bg;
+  spacing: 10px;
   children: [prompt, entry];
-  background-color: @bg;
-  border: 1px;
-  border-color: @fg;
 }
 
-prompt {
-  background-color: @bg-alt;
-  text-color: @bg;
-  padding: 12;
+prompt{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: @blue;
+  font: "FiraCode Nerd Font Medium 14";
 }
 
-entry {
+entry{
+  padding: 10px;
+  color: @fg;
   background-color: @bg;
-  text-color: @fg;
-  padding: 12;
+  border: 2px;
+  border-radius: 10px;
+  border-color: @cyan;
+  placeholder: "Search";
+  placeholder-color: #c0caf570;
 }
 
-listview {
-  background-color: @bg;
-  columns: 1;
+message{
+  children: [textbox];
+}
+
+listview{
   lines: 5;
-  scrollbar: false;
+  background-color: @bg;
+  padding: 10px;
+  spacing: 10px;
 }
 
-element {
-  children : [element-icon, element-text];
+element{
+  padding: 5px;
+  spacing: 15px;
+  background-color: @bg;
+  border-radius: 15px;
+}
+
+element-icon{
+  background-color: @bg;
+  padding: 3px;
+  size: 30px;
+}
+
+element-text{
+  font: "FiraCode Nerd Font Regular 12";
+  padding: 6px;
+  color: @fg;
   background-color: @bg;
 }
 
 element selected {
-  text-color: @fg;
-  background-color: @bg-selected;
+  text-color: @black;
+  background-color: @white;
 }
 
-element-text {
-  background-color: inherit;
-  text-color: @fg;
-  padding: 10;
+element-icon selected {
+  background-color: @white;
 }
 
-element-icon {
-  size: 20;
-  padding: 10;
-  background-color: inherit;
+element-text selected {
+  background-color: @white;
+  color: @black;
 }
 
-mode-switcher {
-  background: @bg;
+mode-switcher{
   background-color: @bg;
-  padding: 10;
+  padding: 10px;
   children: [button];
 }
 
-button {
-  text-color: @fg;
+button{
+  color: @fg;
   background-color: @bg;
+  padding: 10px;
+  font-size: 10em;
 }
 
-button selected {
-  padding: 10;
-  size: 10;
-  text-color: @fg;
-  background-color: @bg-selected;
+button selected{
+  border-radius: 10px;
+  background-color: @black;
+  color: @white;
 }
+
