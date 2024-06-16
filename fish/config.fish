@@ -25,5 +25,6 @@ set GOPATH /home/sourav/go/
 set PATH $PATH /opt/cuda/bin
 export NVCC_PREPEND_FLAGS='-ccbin /usr/bin/g++-12'
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda/
+export _JAVA_AWT_WM_NONREPARENTING=1
 # Default Editor
 #set -Ux EDITOR nvim

@@ -40,7 +40,7 @@ XF86AudioMute
 
 #Brightness control
 XF86MonBrightness{Up,Down}
-  brightnessctl set 10{+,-} --device="amdgpu_bl0"
+  brightnessctl set 10{+,-}
 
 #
 # bspwm hotkeys
